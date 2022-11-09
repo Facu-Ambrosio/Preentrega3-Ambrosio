@@ -1,6 +1,7 @@
 @import "../colores/colores";
-
+/* media query mobile y tablet vertical*/
 @media screen and (min-width:320px) {
+    /* disposicion del main */
     #grilla_inicio {
         display: grid;
         grid-template-areas:
@@ -13,12 +14,11 @@
         align-items: center;
         justify-content: center;
     }
-
+    /* alineacion de texto y define a las etiquetas con el grid-area */
     #texto1 {
         grid-area: texto;
         text-align: center;
     }
-
     #texto2 {
         grid-area: texto2;
         display: flex;
@@ -27,43 +27,37 @@
         flex-direction: column;
         align-items: center;
     }
-
     #imagen_inicio1 {
         grid-area: imagen;
         display: flex;
         justify-content: center;
         padding: 1%;
     }
-
     #imagen_inicio2 {
         grid-area: imagen2;
         display: flex;
         justify-content: center;
         padding: 1%;
     }
-
     #boton_a_galeria {
         grid-area: galeria;
         text-align: center;
         display: flex;
         justify-content: center;
     }
-
     #boton_a_galeria {
         a {
             text-decoration: none;
-            background-color: map-get($colores, $key: footer_header);
+            background-color: map-get($colores, $key: footer_header);/* mapa */
             border-radius: 4px;
             padding: 1%;
-
         }
     }
-
-
+    /* cambia el tamaño de las imagenes en el inicio */
     .imagen_inicio {
         max-width: 90%;
     }
-
+    /* aplica flex al footer y lo mantiene al final de la pagina */
     .footer {
         display: flex;
         flex-direction: column;
@@ -71,53 +65,45 @@
         height: auto;
         margin-top: auto;
     }
-
+    /* define los tamaños de los iconos de las redes sociales y les quita el text-decoration de los links */
     #ig {
         text-decoration: none;
     }
-
     #ig img {
         max-width: 6%;
     }
-
     #fb img {
         max-width: 6%;
     }
-
+    /* alinea los iconos de las redes sociales */    
     #redes {
         text-align: center;
     }
-
+    /* quita el margin a los h */
     #derechos h5 {
         margin: 0;
     }
-
+    /* desactiva la grilla de la galeria de tablet en horizontal y desktop */
     #grilla_galeria {
         display: none;
     }
-
-    #grilla_galeria section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
+    /* le agrega un padding top y bottom al carousel */
     #carousel {
         margin-top: 2%;
         margin-bottom: 2%;
     }
-
+    /* agrega color a las letras de los titulos de las imagenes */
     #titulo_fotos_galeria h5 {
         color: $color_letra_recuadro_imagenes;
         /* variable */
     }
-
+    /* agrega color al recuadro del titulo de las imagenes */
     #titulo_fotos_galeria {
         background-color: $color_recuadro_imagenes;
         /* variable */
     }
 }
-
+/* media query que le agrega color de fondo a los botones de la nav bar, y cambia el tamaño de los iconos de las redes sociales para que no parezcan tan grandes al cambiar de tamaño d epantalla */
 @media screen and (min-width:992px) {
     .color_botones {
         background-color: map-get($map: $colores, $key: botones_nav);
@@ -132,8 +118,9 @@
         max-width: 3%;
     }
 }
-
+/* media query tablet horizontal */
 @media screen and (min-width:1024px) {
+    /* define la disposicion del inicio para tablet en horizontal en adelante */
     #grilla_inicio {
         display: grid;
         grid-template-areas:
@@ -145,39 +132,33 @@
         justify-content: center;
         padding: 1%;
     }
-
+    /* cambia el tamaño de las imagenes del inicio y le da un border radius */
     .imagen_inicio {
         max-width: 60%;
         border-radius: 2%;
     }
-
+    /* define las areas del grid y les aplica un text align */
     #texto1 {
         grid-area: texto;
         text-align: center;
     }
-
     #texto2 {
         grid-area: texto2;
         text-align: center;
     }
-
     #imagen_inicio1 {
         grid-area: imagen;
     }
-
     #imagen_inicio2 {
         grid-area: imagen2;
         display: flex;
         justify-content: center;
     }
-
-
-    #footer {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+    /* desactiva el carousel de la galeria para dispositivos mobile */
+    #carousel {
+        display: none;
     }
-
+    /* cambia la disposicion de las imagenes en la galeria de tablet en horizontal, desactivando previamente el carousel */
     #grilla_galeria {
         display: grid;
         grid-template-areas:
@@ -193,7 +174,13 @@
         /* mapa */
         gap: 2px;
         
-    } 
+    }  
+    #grilla_galeria section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* aplica un texto superpuesto a las imagenes de la galeria mostrando el titulo */
     .containerMio {
         position: relative;
     }
@@ -212,61 +199,47 @@
         padding: 20px;
         text-align: center;
     }
-
-    #carousel {
-        display: none;
-    }
-
+    /* define las areas del grid para las imagenes */
     #g1 {
         grid-area: g1;
     }
-
     #g2 {
         grid-area: g2;
     }
-
     #g3 {
         grid-area: g3;
     }
-
     #g4 {
         grid-area: g4;
     }
-
     #g5 {
         grid-area: g5;
     }
-
     #g6 {
         grid-area: g6;
     }
-
     #g7 {
         grid-area: g7;
     }
-
     #g8 {
         grid-area: g8;
     }
-
     #g9 {
         grid-area: g9;
     }
-
     #g10 {
         grid-area: g10;
     }
-
     #g11 {
         grid-area: g11;
     }
-
     #g12 {
         grid-area: g12;
     }
 }
-
+/* media query desktop */
 @media screen and (min-width:1200px) {
+    /* cambia la disposicion de la galeria para desktop */
     #grilla_galeria {
         grid-template-areas:
             "g1 g2 g3 g4"
@@ -275,9 +248,7 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
     }
-
-
-
+    /* agrega animacion que al pasar el cursor por encima aparece el titulo d elas imagenes en la galeria */
     .overlayMio {
         position: absolute;
         bottom: 0;
@@ -293,9 +264,7 @@
         padding: 20px;
         text-align: center;
     }
-
     .containerMio:hover .overlayMio {
         opacity: 1;
     }
-    
 }

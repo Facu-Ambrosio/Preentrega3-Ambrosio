@@ -1,5 +1,11 @@
 @charset "UTF-8";
+/* mapa con todos los colores utilizados en la pagina */
+/* variables con colores en especifico */
+/* mapa con todos los colores utilizados en la pagina */
+/* variables con colores en especifico */
+/* media query mobile y tablet vertical*/
 @media screen and (min-width: 320px) {
+  /* disposicion del main */
   #grilla_inicio {
     display: grid;
     grid-template-areas: "texto" "imagen" "imagen2" "texto2";
@@ -8,6 +14,7 @@
     align-items: center;
     justify-content: center;
   }
+  /* alineacion de texto y define a las etiquetas con el grid-area */
   #texto1 {
     grid-area: texto;
     text-align: center;
@@ -40,13 +47,15 @@
   }
   #boton_a_galeria a {
     text-decoration: none;
-    background-color: #DD5353;
+    background-color: #DD5353; /* mapa */
     border-radius: 4px;
     padding: 1%;
   }
+  /* cambia el tamaño de las imagenes en el inicio */
   .imagen_inicio {
     max-width: 90%;
   }
+  /* aplica flex al footer y lo mantiene al final de la pagina */
   .footer {
     display: flex;
     flex-direction: column;
@@ -54,6 +63,7 @@
     height: auto;
     margin-top: auto;
   }
+  /* define los tamaños de los iconos de las redes sociales y les quita el text-decoration de los links */
   #ig {
     text-decoration: none;
   }
@@ -63,33 +73,35 @@
   #fb img {
     max-width: 6%;
   }
+  /* alinea los iconos de las redes sociales */
   #redes {
     text-align: center;
   }
+  /* quita el margin a los h */
   #derechos h5 {
     margin: 0;
   }
+  /* desactiva la grilla de la galeria de tablet en horizontal y desktop */
   #grilla_galeria {
     display: none;
   }
-  #grilla_galeria section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  /* le agrega un padding top y bottom al carousel */
   #carousel {
     margin-top: 2%;
     margin-bottom: 2%;
   }
+  /* agrega color a las letras de los titulos de las imagenes */
   #titulo_fotos_galeria h5 {
     color: rgba(240, 248, 255, 0.763);
     /* variable */
   }
+  /* agrega color al recuadro del titulo de las imagenes */
   #titulo_fotos_galeria {
     background-color: rgba(0, 0, 0, 0.6);
     /* variable */
   }
 }
+/* media query que le agrega color de fondo a los botones de la nav bar, y cambia el tamaño de los iconos de las redes sociales para que no parezcan tan grandes al cambiar de tamaño d epantalla */
 @media screen and (min-width: 992px) {
   .color_botones {
     background-color: #EDDBC0;
@@ -102,7 +114,9 @@
     max-width: 3%;
   }
 }
+/* media query tablet horizontal */
 @media screen and (min-width: 1024px) {
+  /* define la disposicion del inicio para tablet en horizontal en adelante */
   #grilla_inicio {
     display: grid;
     grid-template-areas: "texto imagen" "imagen2 texto2";
@@ -112,10 +126,12 @@
     justify-content: center;
     padding: 1%;
   }
+  /* cambia el tamaño de las imagenes del inicio y le da un border radius */
   .imagen_inicio {
     max-width: 60%;
     border-radius: 2%;
   }
+  /* define las areas del grid y les aplica un text align */
   #texto1 {
     grid-area: texto;
     text-align: center;
@@ -132,11 +148,11 @@
     display: flex;
     justify-content: center;
   }
-  #footer {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  /* desactiva el carousel de la galeria para dispositivos mobile */
+  #carousel {
+    display: none;
   }
+  /* cambia la disposicion de las imagenes en la galeria de tablet en horizontal, desactivando previamente el carousel */
   #grilla_galeria {
     display: grid;
     grid-template-areas: "g1 g2 g3" "g4 g5 g6" "g7 g8 g9" "g10 g11 g12";
@@ -148,6 +164,12 @@
     /* mapa */
     gap: 2px;
   }
+  #grilla_galeria section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* aplica un texto superpuesto a las imagenes de la galeria mostrando el titulo */
   .containerMio {
     position: relative;
   }
@@ -166,9 +188,7 @@
     padding: 20px;
     text-align: center;
   }
-  #carousel {
-    display: none;
-  }
+  /* define las areas del grid para las imagenes */
   #g1 {
     grid-area: g1;
   }
@@ -206,12 +226,15 @@
     grid-area: g12;
   }
 }
+/* media query desktop */
 @media screen and (min-width: 1200px) {
+  /* cambia la disposicion de la galeria para desktop */
   #grilla_galeria {
     grid-template-areas: "g1 g2 g3 g4" "g5 g6 g7 g8" "g9 g10 g11 g12";
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
   }
+  /* agrega animacion que al pasar el cursor por encima aparece el titulo d elas imagenes en la galeria */
   .overlayMio {
     position: absolute;
     bottom: 0;
@@ -278,32 +301,33 @@
   justify-content: center;
 }
 
+/* aplica tex-align al texto de la descripcion */
 .texto_descripcion {
   text-align: center;
   width: 85%;
 }
 
+/* saca el margin bottom que viene por defecto en las etiquetas h de bootstrap */
 body header nav div a h2 {
   margin-bottom: 0;
 }
 
+/* saca el margin bottom que viene por defecto en las etiquetas h de bootstrap */
 body header nav div #navbarNav ul li a h5 {
   margin-bottom: 0;
 }
 
-body header nav div a {
-  padding-top: 0%;
-  padding-bottom: 0%;
-}
-
+/* tamaño de las imagenes */
 .imageMio {
   max-width: 100%;
 }
 
+/* saca el margin bottom que viene por defecto en las etiquetas h de bootstrap */
 h3 {
   margin-bottom: 0;
 }
 
+/* aplica un flex al body y le da la estructura vertical con un alto minimo y color */
 body {
   display: flex;
   flex-direction: column;
@@ -311,22 +335,27 @@ body {
   background-color: #DBC8AC; /* mapa */
 }
 
+/* cambia el ancho de formularios en la seccion de pedidos */
 #selector {
   width: 325px;
 }
 
+/* cambia el ancho de formularios en la seccion de pedidos */
 #selector2 {
   width: 220px;
 }
 
+/* reubica el boton de envio de formulario */
 #boton {
   padding-top: 1%;
 }
 
+/* cambia el ancho de formularios en la seccion de pedidos */
 #exampleFormControlInput1 {
   width: 300px;
 }
 
+/* le agruga al formulario de pedidos un padding para separarlo de la nav bar */
 #formulario {
   padding-top: 1%;
 }/*# sourceMappingURL=style.css.map */
