@@ -78,3 +78,23 @@ body {
     min-height: 100vh;
     background-color: map-get($map: $colores, $key: main);/* mapa */
 }
+
+#selector{
+    width: 325px;
+}
+
+#selector2{
+    width: 220px;
+}
+#boton{
+    padding-top: 1%;
+}
+
+#exampleFormControlInput1{
+    width: 300px;
+}
+
+#formulario{
+    padding-top: 1%;
+}
+
