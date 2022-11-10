@@ -69,19 +69,25 @@
     #ig {
         text-decoration: none;
     }
-    #ig img {
-        max-width: 6%;
+    #ig{
+        img {
+            max-width: 6%;
+        }
     }
-    #fb img {
-        max-width: 6%;
+    #fb {
+        img {
+            max-width: 6%;
+        }
     }
     /* alinea los iconos de las redes sociales */    
     #redes {
         text-align: center;
     }
     /* quita el margin a los h */
-    #derechos h5 {
-        margin: 0;
+    #derechos{ 
+        h5 {
+            margin: 0;
+        }
     }
     /* desactiva la grilla de la galeria de tablet en horizontal y desktop */
     #grilla_galeria {
@@ -93,9 +99,11 @@
         margin-bottom: 2%;
     }
     /* agrega color a las letras de los titulos de las imagenes */
-    #titulo_fotos_galeria h5 {
-        color: $color_letra_recuadro_imagenes;
-        /* variable */
+    #titulo_fotos_galeria{
+        h5 {
+            color: $color_letra_recuadro_imagenes;
+            /* variable */
+        }
     }
     /* agrega color al recuadro del titulo de las imagenes */
     #titulo_fotos_galeria {
@@ -113,13 +121,15 @@
         background-color: map-get($map: $colores, $key: botones_nav);
         /* mapa */
     }
-
-    #ig img {
-        max-width: 3%;
+    #ig{ 
+        img {
+            max-width: 3%;
+        }
     }
-
-    #fb img {
-        max-width: 3%;
+    #fb{ 
+        img {
+            max-width: 3%;
+        }
     }
 }
 /* media query tablet horizontal */
@@ -179,10 +189,12 @@
         gap: 2px;
         
     }  
-    #grilla_galeria section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    #grilla_galeria {
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
     /* aplica un texto superpuesto a las imagenes de la galeria mostrando el titulo */
     .containerMio {
