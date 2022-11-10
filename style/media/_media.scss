@@ -102,6 +102,10 @@
         background-color: $color_recuadro_imagenes;
         /* variable */
     }
+    /* le cambia el tamaño a la foto de la descripcion */
+    .imagen_descripcion {
+        max-width: 320px;
+    }
 }
 /* media query que le agrega color de fondo a los botones de la nav bar, y cambia el tamaño de los iconos de las redes sociales para que no parezcan tan grandes al cambiar de tamaño d epantalla */
 @media screen and (min-width:992px) {
@@ -266,5 +270,9 @@
     }
     .containerMio:hover .overlayMio {
         opacity: 1;
+    }
+    /* le cambia el tamaño a la foto de la descripcion */
+    .imagen_descripcion {
+        max-width: 500px;
     }
 }

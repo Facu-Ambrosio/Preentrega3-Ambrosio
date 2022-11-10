@@ -100,6 +100,10 @@
     background-color: rgba(0, 0, 0, 0.6);
     /* variable */
   }
+  /* le cambia el tamaño a la foto de la descripcion */
+  .imagen_descripcion {
+    max-width: 320px;
+  }
 }
 /* media query que le agrega color de fondo a los botones de la nav bar, y cambia el tamaño de los iconos de las redes sociales para que no parezcan tan grandes al cambiar de tamaño d epantalla */
 @media screen and (min-width: 992px) {
@@ -253,6 +257,10 @@
   .containerMio:hover .overlayMio {
     opacity: 1;
   }
+  /* le cambia el tamaño a la foto de la descripcion */
+  .imagen_descripcion {
+    max-width: 500px;
+  }
 }
 /* coloca botones del nav al final */
 .barra_final {
@@ -290,11 +298,6 @@
   background-color: #DBC8AC; /* mapa */
 }
 
-/* le cambia el tamaño a la foto de la descripcion */
-.imagen_descripcion {
-  max-width: 60%;
-}
-
 /* a el bloque que contiene a la imagen de la descripcion le aplica un flex para ubicarlo en el centro */
 .imagen_flex {
   display: flex;
@@ -305,6 +308,7 @@
 .texto_descripcion {
   text-align: center;
   width: 85%;
+  padding-bottom: 2%;
 }
 
 /* saca el margin bottom que viene por defecto en las etiquetas h de bootstrap */
